@@ -1,0 +1,27 @@
+  <table class="table table-sm table-dark">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Apellido</th>
+          <th>Fecha de nacimiento</th>
+          <th> </th>
+          <th></th>
+        </tr>
+    </thead>
+
+    <tbody *ngFor="let estudiante of estudiantes;">
+        
+        <tr>
+          <td> {{estudiante.id}}</td>
+          <td> {{estudiante.nombre}}</td>
+          <td> {{estudiante.apellido}}</td>
+          <td> {{estudiante.fecNacimiento}}</td>
+          <td><button type="button" [routerLink]="['/Editar/', estudiante.id]" class="btn btn-warning">Editar</button></td>
+          <td><button type="button" (click)="EliminarEstudiante(estudiante.id)"   class="btn btn-danger">Eliminar</button></td>
+        </tr>
+        
+
+    </tbody>
+      </table>
+

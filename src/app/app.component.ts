@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'EstudiantesFront';
+  public title = 'Estudiantes';
+  public mostrarList:boolean = true;
+  ocultarLista(value:boolean){
+
+    this.mostrarList = value;
+  }
 }
